@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "last30days-pro-max"
+version = "0.1.0"
+description = "Zyte-native competitor-aware product listening engine for the agentic web."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "Proprietary" }
+authors = [{ name = "Zyte" }]
+keywords = ["zyte", "competitor-intelligence", "web-scraping", "mcp", "agentic", "serp"]
+# Intentionally dependency-free: the package is stdlib-only.
+dependencies = []
+classifiers = [
+    "Private :: Do Not Upload",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Intended Audience :: Developers",
+    "Topic :: Internet :: WWW/HTTP :: Indexing/Search",
+]
+
+[project.urls]
+Homepage = "https://www.zyte.com"
+
+[project.scripts]
+last30days-pro-max = "last30days_pro_max.cli:main"
+last30days-pro-max-mcp = "last30days_pro_max.mcp_server:main"
+
+[tool.setuptools]
+# Ship only the package — not tests/, docs/, or outputs/.
+packages = ["last30days_pro_max"]

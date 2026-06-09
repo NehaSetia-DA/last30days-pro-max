@@ -1,0 +1,23 @@
+# Python build & cache artifacts
+__pycache__/
+*.py[cod]
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Virtualenvs
+.venv/
+venv/
+
+# Run-time data
+*.db
+
+# OS
+.DS_Store
+
+# Generated run artifacts (regenerate with --mock)
+outputs/
+
+# Claude Code local (user-specific) settings
+.claude/settings.local.json
